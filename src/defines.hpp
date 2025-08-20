@@ -1,0 +1,11 @@
+#pragma once
+
+enum Result {
+	SUCCESS = 0,
+	NULL_ERROR,
+	MEMORY_ERROR,
+	OUT_OF_BOUNDS,
+	FAILED_TO_FIND,
+	IO_ERROR,
+	INVALID_INPUT,
+};

@@ -1,0 +1,132 @@
+src/screen.cpp: In function ‘std::string parseFgColor(CharColor)’:
+src/screen.cpp:116:1: warning: control reaches end of non-void function [-Wreturn-type]
+  116 | }
+      | ^
+src/screen.cpp: In function ‘std::string parseBgColor(CharColor)’:
+src/screen.cpp:137:1: warning: control reaches end of non-void function [-Wreturn-type]
+  137 | }
+      | ^
+In file included from src/text_buffer.cpp:3:
+src/logger.hpp: In instantiation of ‘static void Logger::_debug(std::source_location, Args ...) [with Args = {const char*, long int, const char*, long int}]’:
+src/text_buffer.cpp:46:2:   required from here
+   36 | #define debug(...) Logger::_debug(std::source_location::current(), __VA_ARGS__)
+      |                    ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/logger.hpp:22:97: warning: unused parameter ‘args#0’ [-Wunused-parameter]
+   22 |         template <typename... Args> static void _debug(const std::source_location location, Args... args) {
+      |                                                                                             ~~~~^~~~~~~~
+src/logger.hpp:22:97: warning: unused parameter ‘args#1’ [-Wunused-parameter]
+src/logger.hpp:22:97: warning: unused parameter ‘args#2’ [-Wunused-parameter]
+src/logger.hpp:22:97: warning: unused parameter ‘args#3’ [-Wunused-parameter]
+src/logger.hpp: In instantiation of ‘static void Logger::_debug(std::source_location, Args ...) [with Args = {const char*, long int}]’:
+src/text_buffer.cpp:57:2:   required from here
+   36 | #define debug(...) Logger::_debug(std::source_location::current(), __VA_ARGS__)
+      |                    ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/logger.hpp:22:97: warning: unused parameter ‘args#0’ [-Wunused-parameter]
+   22 |         template <typename... Args> static void _debug(const std::source_location location, Args... args) {
+      |                                                                                             ~~~~^~~~~~~~
+src/logger.hpp:22:97: warning: unused parameter ‘args#1’ [-Wunused-parameter]
+src/logger.hpp: In instantiation of ‘static void Logger::_debug(std::source_location, Args ...) [with Args = {const char*}]’:
+src/text_buffer.cpp:191:2:   required from here
+   36 | #define debug(...) Logger::_debug(std::source_location::current(), __VA_ARGS__)
+      |                    ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/logger.hpp:22:97: warning: unused parameter ‘args#0’ [-Wunused-parameter]
+   22 |         template <typename... Args> static void _debug(const std::source_location location, Args... args) {
+      |                                                                                             ~~~~^~~~~~~~
+src/logger.hpp: In instantiation of ‘static void Logger::_debug(std::source_location, Args ...) [with Args = {const char*, long int, const char*}]’:
+src/text_buffer.cpp:419:2:   required from here
+   36 | #define debug(...) Logger::_debug(std::source_location::current(), __VA_ARGS__)
+      |                    ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/logger.hpp:22:97: warning: unused parameter ‘args#0’ [-Wunused-parameter]
+   22 |         template <typename... Args> static void _debug(const std::source_location location, Args... args) {
+      |                                                                                             ~~~~^~~~~~~~
+src/logger.hpp:22:97: warning: unused parameter ‘args#1’ [-Wunused-parameter]
+src/logger.hpp:22:97: warning: unused parameter ‘args#2’ [-Wunused-parameter]
+src/app.cpp: In member function ‘Result Application::init(const char*)’:
+src/app.cpp:54:32: warning: overflow in conversion from ‘int’ to ‘char’ changes value from ‘239’ to ‘-17’ [-Woverflow]
+   54 |         settings.tab_char[0] = 0xef;
+      |                                ^~~~
+src/app.cpp:55:32: warning: overflow in conversion from ‘int’ to ‘char’ changes value from ‘132’ to ‘-124’ [-Woverflow]
+   55 |         settings.tab_char[1] = 0x84;
+      |                                ^~~~
+src/app.cpp:56:32: warning: overflow in conversion from ‘int’ to ‘char’ changes value from ‘129’ to ‘-127’ [-Woverflow]
+   56 |         settings.tab_char[2] = 0x81;
+      |                                ^~~~
+In file included from src/app.cpp:3:
+src/logger.hpp: In instantiation of ‘static void Logger::_debug(std::source_location, Args ...) [with Args = {const char*, const char*}]’:
+src/app.cpp:86:3:   required from here
+   36 | #define debug(...) Logger::_debug(std::source_location::current(), __VA_ARGS__)
+      |                    ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/logger.hpp:22:97: warning: unused parameter ‘args#0’ [-Wunused-parameter]
+   22 |         template <typename... Args> static void _debug(const std::source_location location, Args... args) {
+      |                                                                                             ~~~~^~~~~~~~
+src/logger.hpp:22:97: warning: unused parameter ‘args#1’ [-Wunused-parameter]
+src/logger.hpp: In instantiation of ‘static void Logger::_debug(std::source_location, Args ...) [with Args = {const char*, char*}]’:
+src/app.cpp:458:3:   required from here
+   36 | #define debug(...) Logger::_debug(std::source_location::current(), __VA_ARGS__)
+      |                    ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/logger.hpp:22:97: warning: unused parameter ‘args#0’ [-Wunused-parameter]
+   22 |         template <typename... Args> static void _debug(const std::source_location location, Args... args) {
+      |                                                                                             ~~~~^~~~~~~~
+src/logger.hpp:22:97: warning: unused parameter ‘args#1’ [-Wunused-parameter]
+src/app.cpp: In member function ‘bool Application::processNormalInput()’:
+src/app.cpp:244:47: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  244 |                 case 'a': text_buffer->advance(1);
+      |                           ~~~~~~~~~~~~~~~~~~~~^~~
+src/app.cpp:245:17: note: here
+  245 |                 case 'i': {
+      |                 ^~~~
+In file included from src/main.cpp:4:
+src/rope.hpp:10:9: error: ‘BTreeNode’ does not name a type; did you mean ‘BtreeNode’?
+   10 |         BTreeNode *children[N];
+      |         ^~~~~~~~~
+      |         BtreeNode
+src/rope.hpp: In member function ‘size_t BtreeNode<N>::insert(std::string, size_t)’:
+src/rope.hpp:14:36: error: invalid use of member function ‘constexpr std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::length() const [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; size_type = long unsigned int]’ (did you forget the ‘()’ ?)
+   14 |                 if (index > buffer.length) {
+      |                             ~~~~~~~^~~~~~
+      |                                          ()
+src/rope.hpp:15:25: error: there are no arguments to ‘error’ that depend on a template parameter, so a declaration of ‘error’ must be available [-fpermissive]
+   15 |                         error("index is outside of bounds!");
+      |                         ^~~~~
+src/rope.hpp:15:25: note: (if you use ‘-fpermissive’, G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+src/rope.hpp:17:44: error: invalid use of member function ‘constexpr std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::length() const [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; size_type = long unsigned int]’ (did you forget the ‘()’ ?)
+   17 |                 } else if (index == buffer.length) {
+      |                                     ~~~~~~~^~~~~~
+      |                                                  ()
+src/rope.hpp: At global scope:
+src/rope.hpp:33:9: error: ‘BTreeNode’ does not name a type; did you mean ‘BtreeNode’?
+   33 |         BTreeNode<N> root;
+      |         ^~~~~~~~~
+      |         BtreeNode
+src/rope.hpp: In member function ‘size_t BTree<N>::insert(std::string, size_t)’:
+src/rope.hpp:40:24: error: ‘root’ was not declared in this scope
+   40 |                 return root.insert(data, index);
+      |                        ^~~~
+src/rope.hpp: In member function ‘size_t BTree<N>::remove(size_t, size_t)’:
+src/rope.hpp:44:24: error: ‘root’ was not declared in this scope
+   44 |                 return root.remove(length, index);
+      |                        ^~~~
+src/main.cpp: In function ‘int testRope()’:
+src/main.cpp:10:15: error: class template argument deduction failed:
+   10 |         BTree tree;
+      |               ^~~~
+src/main.cpp:10:15: error: no matching function for call to ‘BTree()’
+src/rope.hpp:36:9: note: candidate: ‘template<unsigned int N> BTree()-> BTree<N>’
+   36 |         BTree() {}
+      |         ^~~~~
+src/rope.hpp:36:9: note:   template argument deduction/substitution failed:
+src/main.cpp:10:15: note:   couldn’t deduce template parameter ‘N’
+   10 |         BTree tree;
+      |               ^~~~
+src/rope.hpp:31:30: note: candidate: ‘template<unsigned int N> BTree(BTree<N>)-> BTree<N>’
+   31 | template <unsigned N> struct BTree {
+      |                              ^~~~~
+src/rope.hpp:31:30: note:   candidate expects 1 argument, 0 provided
+src/main.cpp:12:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   12 | }
+      | ^
+src/main.cpp: In function ‘int main(int, char**)’:
+src/main.cpp:21:17: error: ‘error’ was not declared in this scope; did you mean ‘perror’?
+   21 |                 error("rope failed!");
+      |                 ^~~~~
+      |                 perror
